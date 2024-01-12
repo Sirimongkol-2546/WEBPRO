@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5/2 JSON</title>
+    
+</head>
+<body>
+    <p id="out"></p>
+
+    <script>
+        getRemoteData("superheroes.json");
+        async function getRemoteData(url) {   
+            //open file         
+            let datObject = await fetch(url);
+            let superheroes = await datObject.json();
+           
+            let text = "<h1>" + superheroes.squadName + "</h1>";
+            text += "Hometown: " + superheroes.homeTown + "<br>";
+            text += "Formed: " + superheroes.formed + "<br>" + "<br>";
+
+            //เข้าถึงข้อมูลที่เป็น arrey 
+            for(member of superheroes.members){
+                text += "Name: " + member.name + "<br>";
+                text += "Age: " + member.age + "<br>";
+                text += "SecretIdentity: " + member.secretIdentity + "<br>";
+                // text += "<ul>";
+
+                for(power of member.powers){
+                    text += "<li>" + "Powers: " + power + "<br>" + "</li>";
+
+                }
+
+            }
+
+            
+            document.getElementById("out").innerHTML = text;
+        }
+
+</script>
+    
+</body>
+</html>
