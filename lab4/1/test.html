@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p1">This is paragraph</p>
+
+    <script>
+        // let p = document.createElement("p");
+        // let tx = document.createTextNode("This is a new node");
+        // p.appendChild(tx); //text go to childnode p
+
+        // //หา parent node ให้
+        // document.body.appendChild(p);
+
+        let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+        let ol1 = document.createElement("ol");
+        ol1.setAttribute('id', 'ol1');
+
+        for (day of days) {
+            let li = document.createElement("li");
+            li.innerHTML = day;
+            ol1.appendChild(li);
+        }
+
+        document.body.appendChild(ol1);
+
+    </script>
+
+
+    <!--
+สร้าง list ที่ เป็นรายชื่อวันในสัปดาห์ 
+ <ol id="ol1">
+ <li>text 1</li>
+ <li>text 2</li>
+ </ol>
+-->
+
+</body>
+
+</html>

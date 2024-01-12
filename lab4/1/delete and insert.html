@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="div1">
+        <p id="p1">JavaScript</p>
+        <p id="p2">Python</p>
+        <p id="p3">TypeScript</p>
+        <!-- add a new element here -->
+    </div>
+    <hr>
+    <div id="div2">
+        <p>My favourite fruit.</p>
+        <!-- add IMG here -->
+    </div>
+
+
+    <button type="button" onclick="addNode()">Add Node</button>
+    <button type="button" onclick="deleteNode()">Delete Node</button>
+    <button type="button" onclick="addNewImage()">Add Image</button>
+
+    <script>
+        function addNode() {
+            // <p>a new paragraph</p>
+            let ptag = document.createElement("p");
+            // create text node 
+            let txt = document.createTextNode("a new paragraph 555555");
+            // append text node to a parent node
+            ptag.appendChild(txt);
+
+            let parent1 = document.getElementById("div1");
+            // append element node to a parent node
+            parent1.appendChild(ptag);
+
+
+        }
+        function addNewImage() {
+            // <img src="http://10.0.15.21/lab/lab4/apples.jpg">
+            let imgtag = document.createElement("img");
+
+            //วิธีที่ 1 ไม่ใช้ appendChildb
+            let srcAttr = document.createAttribute("src");
+            srcAttr.value = "http://10.0.15.21/lab/lab4/apples.jpg";
+            imgtag.setAttributeNode(srcAttr);
+
+            //วิธีที่ 2
+            //imgtag.setAttribute('src', 'http://10.0.15.21/lab/lab4/apples.jpg');
+
+            // add to <body>
+            let parent3 = document.getElementById("div2");
+            parent3.appendChild(imgtag);
+
+
+        }
+
+        function deleteNode() {
+            let parent2 = document.getElementById("div1");
+            let delPtag = document.getElementById("p1");
+            parent2.removeChild(delPtag);
+        }
+    </script>
+
+
+</body>
+
+</html>
