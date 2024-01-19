@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab6/1</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .left {
+            background-color: #2196F3;
+            padding: 20px;
+            float: left;
+            width: 33%;
+        }
+
+        .main {
+            background-color: #f1f1f1;
+            padding: 20px;
+            float: left;
+            width: 33%;
+        }
+
+        .right {
+            background-color: #4CAF50;
+            float: left;
+            padding: 20px;
+            width: 33%;
+        }
+        
+        @media screen and (max-width:400px) {
+            .left,
+            .main,
+            .right {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="head">
+            <h1>Programming</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti perferendis ullam nostrum architecto
+                alias libero neque, commodi at molestiae eveniet!</p>
+        </div>
+
+        <div class="content-container">
+            <div class="left">
+                <h1>C</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti perferendis ullam nostrum
+                    architecto alias libero neque, commodi at molestiae eveniet!</p>
+            </div>
+
+            <div class="main">
+                <h1>Python</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti perferendis ullam nostrum
+                    architecto alias libero neque, commodi at molestiae eveniet!</p>
+            </div>
+            <div class="right">
+                <h1>Java</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti perferendis ullam nostrum
+                    architecto alias libero neque, commodi at molestiae eveniet!</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
